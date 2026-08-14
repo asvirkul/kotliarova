@@ -451,7 +451,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../../uploads/shader-bg.png");
+  background-image: url("../../videos/hero.webm");
   background-size: cover;
   background-position: center;
   z-index: -2;
@@ -936,3 +936,5 @@ a:hover {
 .hero__chevron-down svg {
   width: 30px;
 }
+
+/*# sourceMappingURL=main.css.map */

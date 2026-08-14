@@ -1,0 +1,103 @@
+@use "../abstracts/variables" as *;
+
+.button {
+  font-family: $font-body;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button--header {
+  position: relative;
+  padding: 13px 20px;
+  border: 0.5px solid $color-accent;
+  background: $color-accent;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+
+  cursor: pointer;
+  outline: none;
+  transition:
+    letter-spacing 0.3s ease,
+    background 0.3s ease;
+
+  &:hover {
+    letter-spacing: 0.18em;
+
+    .button-header__icon {
+      transform: rotate(45deg) scale(1);
+      margin-right: 10px;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+  }
+}
+
+.button-header__icon {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  transform: rotate(45deg) scale(0);
+  margin-right: 0;
+  flex-shrink: 0;
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    margin-right 0.35s ease;
+}
+
+.button--primary,
+.button--secondary {
+  padding: 16px 28px;
+  font-size: 12px;
+  letter-spacing: 0.09em;
+  max-width: 350px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.button--primary:hover {
+  animation: stampSettle 0.38s ease;
+  background: $color-accent-active;
+}
+.button--primary {
+  border: none;
+  background: $color-accent;
+  color: $color-cream;
+  transition:
+    transform 0.16s ease,
+    background 0.25s ease;
+}
+
+.button--secondary:hover {
+  background: rgba(122, 42, 31, 0.04);
+  border: 1px solid $color-accent;
+  color: $color-accent;
+}
+.button--secondary {
+  border: 1px solid rgba(51, 45, 37, 0.3);
+  background: transparent;
+  color: $color-text;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+@keyframes stampSettle {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.965);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

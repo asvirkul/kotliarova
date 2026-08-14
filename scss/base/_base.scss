@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-body;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  color: $color-accent;
+}
+
+a:hover {
+  color: $color-accent-hover;
+}
+
+.site-shell {
+  color: $color-text;
+}
+
+.svg-patterns {
+  position: absolute;
+  width: 0;
+  height: 0;
+}

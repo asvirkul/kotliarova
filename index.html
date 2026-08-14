@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <svg style="display: none">
+        <filter id="grain">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.85"
+            numOctaves="4"
+            stitchTiles="stitch"
+          />
+          <rect width="100%" height="100%" filter="url(#g)" opacity="0.25" />
+          <feColorMatrix type="saturate" values="0" />
+          <feBlend in="SourceGraphic" mode="multiply" />
+        </filter>
+      </svg>
+      <svg class="svg-patterns" aria-hidden="true" focusable="false">
+        <defs>
+          <pattern
+            id="stitchPattern"
+            x="0"
+            y="0"
+            width="42"
+            height="42"
+            patternUnits="userSpaceOnUse"
+          >
+            <g fill="currentColor">
+              <rect x="16" y="6" width="4" height="4"></rect>
+              <rect x="20" y="10" width="4" height="4"></rect>
+              <rect x="16" y="14" width="4" height="4"></rect>
+              <rect x="12" y="10" width="4" height="4"></rect>
+              <rect x="16" y="22" width="4" height="4"></rect>
+              <rect x="20" y="26" width="4" height="4"></rect>
+              <rect x="16" y="30" width="4" height="4"></rect>
+              <rect x="12" y="26" width="4" height="4"></rect>
+              <g
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linecap="round"
+              >
+                <path d="M2,2 L6,6 M6,2 L2,6"></path>
+                <path d="M36,2 L40,6 M40,2 L36,6"></path>
+                <path d="M2,36 L6,40 M6,36 L2,40"></path>
+                <path d="M36,36 L40,40 M40,36 L36,40"></path>
+              </g>
+            </g>
+          </pattern>
+          <pattern
+            id="fabricPattern"
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            patternUnits="userSpaceOnUse"
+          >
+            <g fill="currentColor">
+              <rect x="30" y="10" width="7" height="7"></rect>
+              <rect x="37" y="17" width="7" height="7"></rect>
+              <rect x="30" y="24" width="7" height="7"></rect>
+              <rect x="23" y="17" width="7" height="7"></rect>
+              <rect x="37" y="31" width="7" height="7"></rect>
+              <rect x="30" y="46" width="7" height="7"></rect>
+              <rect x="37" y="53" width="7" height="7"></rect>
+              <rect x="30" y="60" width="7" height="7"></rect>
+              <rect x="23" y="53" width="7" height="7"></rect>
+              <rect x="37" y="39" width="7" height="7"></rect>
+              <rect x="60" y="10" width="7" height="7"></rect>
+              <rect x="60" y="46" width="7" height="7"></rect>
+              <g
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+              >
+                <path d="M4,4 L10,10 M10,4 L4,10"></path>
+                <path d="M70,70 L76,76 M76,70 L70,76"></path>
+              </g>
+            </g>
+          </pattern>
+        </defs>
+      </svg>
+
+      <div class="top-bar">
+        <header class="site-header">
+          <nav class="primary-nav" aria-label="Основна навігація">
+            <a class="primary-nav__link" href="#">Теми</a>
+            <a class="primary-nav__link" href="#">Підхід</a>
+            <a class="primary-nav__link" href="#">Умови</a>
+            <a class="primary-nav__link" href="#">Сертифікація</a>
+            <a class="primary-nav__link" href="#">FAQ</a>
+          </nav>
+          <div class="header-actions">
+            <span class="language-switcher">
+              UA
+              <svg
+                class="language-switcher__icon"
+                width="8"
+                height="6"
+                viewBox="0 0 8 6"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M1 1L4 4L7 1"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <a href="#" class="emergency-link">
+              <span class="emergency-link__icon" aria-hidden="true"></span>
+              <p>Екстрена допомога</p>
+            </a>
+            <button class="button button--header" type="button">
+              <span class="button-header__icon" aria-hidden="true"></span>
+              Записатися
+            </button>
+          </div>
+        </header>
+      </div>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-media hero-media--left" aria-hidden="true">
+            <div class="hero-media__backdrop hero-media__backdrop--left"></div>
+            <figure class="hero-media__portrait">
+              <div class="hero-media__portrait-frame"></div>
+              <div class="hero-media__shadow-up"></div>
+              <div class="hero-media__shadow-left"></div>
+              <div class="hero-media__shadow-down"></div>
+              <img
+                class="hero-media__image hero-media__image--portrait"
+                src="./images/kotliarova.webp"
+                alt="Портрет психолога"
+              />
+            </figure>
+            <figure class="hero-media__embroidery">
+              <img
+                class="hero-media__image"
+                src="./images/ukranian-graphic.webp"
+                alt="Вишивка на фото гір"
+              />
+            </figure>
+            <div class="hero-media__video-text">
+              <p>Hic sum ut te adiuvem altius in te ipsum introspicere.</p>
+            </div>
+          </div>
+
+          <div class="hero-media hero-media--right" aria-hidden="true">
+            <figure class="hero-media__scalloped">
+              <div class="hero-media__scalloped-shadow-up"></div>
+              <div class="hero-media__scalloped-shadow hero-media__card-1">
+                <div class="hero-media__frame-bg"></div>
+                <div class="hero-media__frame">
+                  <video
+                    class="hero-media__image hero-media__image--landscape"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                  >
+                    <source src="./videos/hero.webm" />
+                  </video>
+                </div>
+              </div>
+              <div class="hero-media__scalloped-shadow hero-media__card-2">
+                <div class="hero-media__frame">
+                  <img
+                    class="hero-media__image hero-media__image--landscape"
+                    src="./images/rocks.webp"
+                    alt="Туманні гори"
+                  />
+                </div>
+              </div>
+              <div class="hero-media__scalloped-shadow hero-media__card-3">
+                <div class="hero-media__frame">
+                  <img
+                    class="hero-media__image hero-media__image--landscape"
+                    src="./images/forest.webp"
+                    alt="Туманні гори"
+                  />
+                </div>
+              </div>
+            </figure>
+          </div>
+
+          <div class="hero-content">
+            <div class="logo"><img src="../uploads/logo.png" alt="" /></div>
+            <div class="hero-media__name">
+              <div class="hero-media__name-content">
+                <div class="hero-media__name-text">
+                  <h1>Олександра Котлярова</h1>
+                </div>
+                <span class="hero-media__name-icon hero-media__name-icon-small">
+                  <span class="hero-media__line"></span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="128 4 44 44"
+                    fill="none"
+                    role="img"
+                    aria-labelledby="title desc"
+                  >
+                    <g
+                      stroke="currentColor"
+                      stroke-width="2.8"
+                      stroke-linecap="square"
+                      stroke-linejoin="miter"
+                      vector-effect="non-scaling-stroke"
+                    >
+                      <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
+                      <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
+                      <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
+                      <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
+                    </g>
+                  </svg>
+                  <span class="hero-media__line"></span>
+                </span>
+                <div class="hero-media__details">
+                  <p>психолог</p>
+                  <span class="hero-media__vertical-line"></span>
+                  <p>гештальт-терапевт</p>
+                </div>
+              </div>
+            </div>
+            <h1 class="hero-title" id="hero-title">
+              Інколи один крок визначає якість всієї дороги життя
+            </h1>
+            <span class="hero-media__name-icon hero-media__name-icon-middle">
+              <span class="hero-media__line"></span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="128 4 44 44"
+                fill="none"
+                role="img"
+                aria-labelledby="title desc"
+              >
+                <g
+                  stroke="currentColor"
+                  stroke-width="2.8"
+                  stroke-linecap="square"
+                  stroke-linejoin="miter"
+                  vector-effect="non-scaling-stroke"
+                >
+                  <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
+                  <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
+                  <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
+                  <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
+                </g>
+              </svg>
+              <span class="hero-media__line"></span>
+            </span>
+            <p class="hero-subtitle">Зроби цей крок.</p>
+            <div class="hero-actions">
+              <button class="button button--primary" type="button">
+                Записатися на сесію
+              </button>
+              <button class="button button--secondary" type="button">
+                Написати в Telegram
+              </button>
+            </div>
+          </div>
+          <div class="hero__chevron-down">
+            <svg
+              width="48"
+              height="32"
+              viewBox="0 0 48 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6L24 26L44 6"
+                stroke="#8C8177"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

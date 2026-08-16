@@ -193,7 +193,7 @@ a:hover {
   align-items: center;
   gap: 20px;
   padding: 20px 6vw;
-  position: fixed;
+  position: absolute;
   background: transparent;
 }
 
@@ -976,7 +976,7 @@ a:hover {
 }
 
 .topics__title {
-  margin: 0 0 20px;
+  margin: 0 0 15px;
   font-family: "Chopin", serif;
   font-weight: 300;
   font-size: 34px;
@@ -989,7 +989,7 @@ a:hover {
   max-width: 530px;
   font-family: "NeueMontreal", sans-serif;
   font-size: 30px;
-  line-height: 1.5;
+  line-height: 1.2;
   color: rgba(51, 45, 37, 0.75);
   font-family: "Azbuka";
 }
@@ -1218,3 +1218,5 @@ a:hover {
   height: auto;
   object-fit: cover;
 }
+
+/*# sourceMappingURL=main.css.map */

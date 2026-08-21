@@ -1,0 +1,234 @@
+@use "../abstracts/variables" as *;
+
+.approach {
+  position: relative;
+  padding: 40px 0 40px;
+}
+
+.approach__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 55%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.approach__bg--left {
+  left: 0;
+  background-image: url("../images/white-bg.png");
+  background-repeat: repeat;
+  background-color: rgba(157, 156, 156, 0.2196078431);
+  background-blend-mode: multiply;
+  width: 45%;
+}
+
+.approach__bg--right {
+  right: 0;
+  background-image: url("../images/approach_bg3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+  width: 55%;
+}
+
+.approach__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.approach__intro {
+  position: relative;
+}
+
+.approach__title {
+  margin: 0 0 20px;
+  font-family: "Chopin", serif;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 1.15;
+  color: $color-text;
+
+  .italic {
+    font-family: "Azbuka";
+    font-style: italic;
+    font-size: 80px;
+    display: block;
+    color: $color-accent;
+    text-align: left;
+  }
+}
+
+.approach__description {
+  margin: 0;
+  font-family: $font-azbuka;
+  line-height: 1.2;
+  font-size: 30px;
+  max-width: 486px;
+  color: #332d25;
+  .italic {
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
+
+.approach__photo {
+  margin: 0;
+  max-width: 500px;
+  padding: 20px 0 0px 0;
+}
+
+.approach__photo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.approach__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.approach__item-title {
+  margin: 0 0 15px;
+  font-family: $font-chopin;
+  font-size: 33px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-accent;
+}
+
+.approach__item {
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+
+.approach__item-text {
+  margin: 0;
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(51, 45, 37, 0.75);
+}
+
+.approach__divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 24px 0 0;
+
+  svg {
+    flex-shrink: 0;
+    width: 18px;
+    color: $color-accent;
+  }
+
+  .media__line {
+    flex: 1 1 auto;
+    width: auto;
+  }
+}
+
+.approach__intro {
+  padding: 50px 0px 50px 50px;
+  background-image: url("../images/approach-left-bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.approach__note {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  max-width: 420px;
+  margin: 0;
+}
+
+.approach__note-icon {
+  flex-shrink: 0;
+  width: 16px;
+  margin-top: 2px;
+  color: $color-accent;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.approach__note-text {
+  margin: 0;
+  font-family: $font-body;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(51, 45, 37, 0.75);
+}
+
+.approach__quote {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  z-index: 2;
+  width: 100%;
+  max-width: 650px;
+  padding: 25px 52px;
+  background-color: #f1ece1;
+  outline: 1px solid $color-accent;
+  outline-offset: -10px;
+  box-shadow: 0px 2px 30px 2px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  transform: translate(-50%, 50%);
+}
+
+.approach__quote-content {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 16px;
+}
+
+.approach__quote-mark {
+  height: 10px;
+  flex-shrink: 0;
+  font-family: $font-chopin;
+  font-size: 60px;
+  line-height: 1;
+  color: $color-accent;
+  font-weight: bold;
+}
+
+.approach__quote-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+  font-family: $font-chopin;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 1.3;
+  color: #332d25;
+  margin-bottom: 15px;
+}
+
+.approach__quote-author {
+  margin: 6px 0 0;
+  text-align: center;
+  font-family: $font-body;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #332d25;
+}

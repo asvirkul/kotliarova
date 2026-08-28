@@ -11,10 +11,62 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url("../images/certificates-bg1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: url("../images/white-bg.png");
+  background-repeat: repeat;
+}
+
+.certificates__corner {
+  position: absolute;
+  z-index: 2;
+  width: 260px;
+  height: 260px;
+  pointer-events: none;
+}
+
+.certificates__corner--top-left {
+  top: 0;
+  left: 0;
+}
+
+.certificates__corner--top-right {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.certificates__corner--bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+
+.certificates__corner--bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1, -1);
+}
+
+.certificates__corner-line {
+  position: absolute;
+  background-color: $color-accent;
+
+  @for $i from 1 through 3 {
+    $offset: 10px + ($i - 1) * 8px;
+
+    &:nth-child(#{$i}) {
+      top: $offset;
+      left: $offset;
+      width: 130px + ($i - 1) * 22px;
+      height: 2px;
+    }
+
+    &:nth-child(#{$i + 3}) {
+      top: $offset;
+      left: $offset;
+      width: 2px;
+      height: 150px + ($i - 1) * 40px;
+    }
+  }
 }
 
 .certificates__title-wrapper {

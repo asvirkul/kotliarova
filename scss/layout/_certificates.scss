@@ -57,13 +57,13 @@
       top: $offset;
       left: $offset;
       width: 130px + ($i - 1) * 22px;
-      height: 2px;
+      height: 1px;
     }
 
     &:nth-child(#{$i + 3}) {
       top: $offset;
       left: $offset;
-      width: 2px;
+      width: 1px;
       height: 150px + ($i - 1) * 40px;
     }
   }
@@ -103,6 +103,7 @@
   .media__line {
     flex: 1 1 auto;
     width: auto;
+    height: 1px;
   }
 }
 
@@ -220,7 +221,7 @@
 .certificates__progress {
   position: relative;
   width: 320px;
-  height: 2px;
+  height: 1px;
   background-color: rgba(51, 45, 37, 0.15);
   overflow: hidden;
 
@@ -237,4 +238,62 @@
   font-size: 14px;
   letter-spacing: 0.05em;
   color: $color-text;
+}
+
+@media (max-width: 1350px) {
+  .certificates__slide {
+    width: 180px;
+  }
+
+  .certificates__corner {
+    width: 120px;
+    height: 120px;
+  }
+
+  .certificates__corner .certificates__corner-line {
+    @for $i from 1 through 3 {
+      $offset: 6px + ($i - 1) * 4px;
+
+      &:nth-child(#{$i}) {
+        top: $offset;
+        left: $offset;
+        width: 50px + ($i - 1) * 15px;
+        height: 1px;
+      }
+
+      &:nth-child(#{$i + 3}) {
+        top: $offset;
+        left: $offset;
+        width: 1px;
+        height: 60px + ($i - 1) * 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .certificates__corner {
+    width: 70px;
+    height: 70px;
+  }
+
+  .certificates__corner .certificates__corner-line {
+    @for $i from 1 through 3 {
+      $offset: 4px + ($i - 1) * 3px;
+
+      &:nth-child(#{$i}) {
+        top: $offset;
+        left: $offset;
+        width: 28px + ($i - 1) * 8px;
+        height: 1px;
+      }
+
+      &:nth-child(#{$i + 3}) {
+        top: $offset;
+        left: $offset;
+        width: 1px;
+        height: 34px + ($i - 1) * 11px;
+      }
+    }
+  }
 }

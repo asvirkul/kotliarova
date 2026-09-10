@@ -1,8 +1,11 @@
 @use "../abstracts/variables" as *;
 
 .button {
+  display: inline-block;
   font-family: $font-body;
   text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -27,6 +30,7 @@
 
   &:hover {
     letter-spacing: 0.18em;
+    color: #fff;
 
     .button-header__icon {
       transform: rotate(45deg) scale(1);
@@ -65,6 +69,7 @@
 .button--primary:hover {
   animation: stampSettle 0.38s ease;
   background: $color-accent-active;
+  color: $color-cream;
 }
 .button--primary {
   border: none;

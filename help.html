@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="js/main.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="top-bar">
+        <header class="site-header site-header--with-logo">
+          <nav class="primary-nav" aria-label="Основна навігація">
+            <a class="primary-nav__link" href="index.html#topics">Теми</a>
+            <a class="primary-nav__link" href="index.html#approach">Підхід</a>
+            <a class="primary-nav__link" href="index.html#format">Умови</a>
+            <a class="primary-nav__link" href="index.html#certificates"
+              >Сертифікація</a
+            >
+            <a class="primary-nav__link" href="index.html#faq">FAQ</a>
+          </nav>
+
+          <a href="index.html" class="site-logo">
+            <img src="images/logo.webp" class="site-logo__mark" alt="" />
+            <span class="site-logo__name">Олександра Котлярова</span>
+          </a>
+
+          <div class="header-actions">
+            <span class="language-switcher">
+              UA
+              <svg
+                class="language-switcher__icon"
+                width="8"
+                height="6"
+                viewBox="0 0 8 6"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M1 1L4 4L7 1"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <a href="help.html" class="emergency-link">
+              <span class="emergency-link__icon" aria-hidden="true"></span>
+              <p>Екстрена допомога</p>
+            </a>
+            <button
+              class="header-burger"
+              type="button"
+              aria-label="Відкрити меню"
+              aria-expanded="false"
+              aria-controls="mobile-nav"
+              data-mobile-nav-toggle
+            >
+              <span class="header-burger__line"></span>
+              <span class="header-burger__line"></span>
+              <span class="header-burger__line"></span>
+            </button>
+          </div>
+        </header>
+      </div>
+
+      <div class="mobile-nav-overlay" data-mobile-nav-overlay></div>
+
+      <div
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-hidden="true"
+        data-mobile-nav
+      >
+        <button
+          class="mobile-nav__close"
+          type="button"
+          aria-label="Закрити меню"
+          data-mobile-nav-close
+        >
+          <span class="mobile-nav__close-line"></span>
+          <span class="mobile-nav__close-line"></span>
+        </button>
+
+        <nav class="mobile-nav__links" aria-label="Мобільна навігація">
+          <a class="mobile-nav__link" href="index.html#topics">Теми</a>
+          <a class="mobile-nav__link" href="index.html#approach">Підхід</a>
+          <a class="mobile-nav__link" href="index.html#format">Умови</a>
+          <a class="mobile-nav__link" href="index.html#certificates"
+            >Сертифікація</a
+          >
+          <a class="mobile-nav__link" href="index.html#faq">FAQ</a>
+        </nav>
+
+        <div
+          class="language-switcher mobile-nav__language"
+          data-language-switcher
+        >
+          <button
+            type="button"
+            class="language-switcher__toggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="language-switcher__current">UA</span>
+            <svg
+              class="language-switcher__icon"
+              width="8"
+              height="6"
+              viewBox="0 0 8 6"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M1 1L4 4L7 1"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="language-switcher__dropdown">
+            <button
+              type="button"
+              class="language-switcher__option is-active"
+              data-lang="UA"
+            >
+              UA
+            </button>
+            <button
+              type="button"
+              class="language-switcher__option"
+              data-lang="RU"
+            >
+              RU
+            </button>
+          </div>
+        </div>
+
+        <a href="help.html" class="mobile-nav__emergency">
+          <span class="emergency-link__icon" aria-hidden="true"></span>
+          Екстрена допомога
+        </a>
+
+        <a class="button button--header mobile-nav__cta" href="#">
+          <span class="button-header__icon" aria-hidden="true"></span>
+          Записатися
+        </a>
+      </div>
+
+      <div class="help-banner">
+        <span class="help-banner__text">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="128 4 44 44"
+            fill="none"
+          >
+            <g
+              stroke="currentColor"
+              stroke-width="2.8"
+              stroke-linecap="square"
+              stroke-linejoin="miter"
+              vector-effect="non-scaling-stroke"
+            >
+              <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
+              <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
+              <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
+              <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
+            </g>
+          </svg>
+          Екстрена підтримка · Допомога тут і зараз
+        </span>
+      </div>
+
+      <main>
+        <section class="help">
+          <div class="help__bg" aria-hidden="true"></div>
+          <span class="help__corner help__corner--top-left" aria-hidden="true">
+            <i class="help__corner-line"></i>
+            <i class="help__corner-line"></i>
+            <i class="help__corner-line"></i>
+            <i class="help__corner-line"></i>
+            <i class="help__corner-line"></i>
+            <i class="help__corner-line"></i>
+          </span>
+          <span
+            class="help__corner help__corner--bottom-right"
+            aria-hidden="true"
+          >
+            <i class="help__corner-line"></i>
+            <i class="help__corner-line"></i>
+            <i class="help__corner-line"></i>
+            <i class="help__corner-line"></i>
+            <i class="help__corner-line"></i>
+            <i class="help__corner-line"></i>
+          </span>
+          <div class="help__container">
+            <figure class="help__media">
+              <span
+                class="help__media-block help__media-block--accent"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="help__media-block help__media-block--muted"
+                aria-hidden="true"
+              ></span>
+              <img
+                src="images/help.PNG"
+                class="help__image"
+                alt="Дерево над водою"
+              />
+            </figure>
+
+            <div class="help__content">
+              <span class="help__eyebrow">Екстрена підтримка</span>
+              <h1 class="help__title">Якщо зараз тобі тривожно</h1>
+              <p class="help__description">
+                Цей запис створений для моментів, коли тривога стає надто
+                сильною
+              </p>
+              <span class="help__divider" aria-hidden="true"></span>
+              <p class="help__text">
+                Просто увімкни аудіо, слухай голос і дозволь собі крок за кроком
+                повертатися до більш спокійного стану і відчуття реальності
+                через дихання, заземлення та прості дії
+              </p>
+
+              <div class="help__actions">
+                <button
+                  class="help__audio-btn"
+                  type="button"
+                  data-audio-btn
+                  aria-pressed="false"
+                >
+                  <span class="help__audio-icon" aria-hidden="true">
+                    <svg
+                      width="8"
+                      height="10"
+                      viewBox="0 0 8 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0L8 5L0 10V0Z" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <span class="help__audio-label">Увімкнути аудіо</span>
+                </button>
+                <a class="button button--primary" href="#">
+                  Записатися на сесію
+                </a>
+              </div>
+
+              <audio
+                id="help-audio"
+                class="help__audio"
+                preload="none"
+                data-audio
+              >
+                <source src="audio/voice.webm" type="audio/webm" />
+                <source src="audio/voice-96k.mp3" type="audio/mpeg" />
+              </audio>
+
+              <a href="https://t.me/psycholog_ok" class="help__telegram-link"
+                >Написати в Telegram</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__bg help__footer" aria-hidden="true"></div>
+        <div class="site-footer__container">
+          <span class="site-footer__divider" aria-hidden="true">
+            <span class="media__line"></span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="128 4 44 44"
+              fill="none"
+            >
+              <g
+                stroke="currentColor"
+                stroke-width="2.8"
+                stroke-linecap="square"
+                stroke-linejoin="miter"
+                vector-effect="non-scaling-stroke"
+              >
+                <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
+                <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
+                <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
+                <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
+              </g>
+            </svg>
+            <span class="media__line"></span>
+          </span>
+
+          <div class="site-footer__row">
+            <div class="site-footer__brand">
+              <img
+                src="images/logo.webp"
+                class="site-footer__logo"
+                alt="Логотип Олександра Котлярова"
+              />
+              <span class="site-footer__name">Олександра Котлярова</span>
+            </div>
+
+            <nav class="site-footer__social" aria-label="Соціальні мережі">
+              <a href="#" class="site-footer__social-link">Instagram</a>
+              <span class="site-footer__dot" aria-hidden="true"></span>
+              <a href="#" class="site-footer__social-link">Telegram</a>
+            </nav>
+
+            <div class="site-footer__legal">
+              <a href="#" class="site-footer__legal-link"
+                >Політика повернення</a
+              >
+              <p class="site-footer__copyright">© 2026 Олександра Котлярова</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

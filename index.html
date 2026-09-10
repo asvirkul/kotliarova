@@ -89,69 +89,273 @@
       <div class="top-bar">
         <header class="site-header">
           <nav class="primary-nav" aria-label="Основна навігація">
-            <a class="primary-nav__link" href="#">Теми</a>
-            <a class="primary-nav__link" href="#">Підхід</a>
-            <a class="primary-nav__link" href="#">Умови</a>
-            <a class="primary-nav__link" href="#">Сертифікація</a>
-            <a class="primary-nav__link" href="#">FAQ</a>
+            <a class="primary-nav__link" href="#topics">Теми</a>
+            <a class="primary-nav__link" href="#approach">Підхід</a>
+            <a class="primary-nav__link" href="#format">Умови</a>
+            <a class="primary-nav__link" href="#certificates">Сертифікація</a>
+            <a class="primary-nav__link" href="#faq">FAQ</a>
           </nav>
           <div class="header-actions">
-            <span class="language-switcher">
-              UA
-              <svg
-                class="language-switcher__icon"
-                width="8"
-                height="6"
-                viewBox="0 0 8 6"
-                fill="none"
-                aria-hidden="true"
+            <a href="index.html" class="header-logo">
+              <img src="images/logo.webp" alt="Олександра Котлярова" />
+            </a>
+            <div class="language-switcher" data-language-switcher>
+              <button
+                type="button"
+                class="language-switcher__toggle"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
-                <path
-                  d="M1 1L4 4L7 1"
-                  stroke="currentColor"
-                  stroke-width="1.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-            <a href="#" class="emergency-link">
+                <span class="language-switcher__current">UA</span>
+                <svg
+                  class="language-switcher__icon"
+                  width="8"
+                  height="6"
+                  viewBox="0 0 8 6"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 1L4 4L7 1"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="language-switcher__dropdown">
+                <button
+                  type="button"
+                  class="language-switcher__option is-active"
+                  data-lang="UA"
+                >
+                  UA
+                </button>
+                <button type="button" class="language-switcher__option" data-lang="RU">
+                  RU
+                </button>
+              </div>
+            </div>
+            <a href="help.html" class="emergency-link">
               <span class="emergency-link__icon" aria-hidden="true"></span>
               <p>Екстрена допомога</p>
             </a>
-            <button class="button button--header" type="button">
+            <a class="button button--header" href="#">
               <span class="button-header__icon" aria-hidden="true"></span>
               Записатися
+            </a>
+            <button
+              class="header-burger"
+              type="button"
+              aria-label="Відкрити меню"
+              aria-expanded="false"
+              aria-controls="mobile-nav"
+              data-mobile-nav-toggle
+            >
+              <span class="header-burger__line"></span>
+              <span class="header-burger__line"></span>
+              <span class="header-burger__line"></span>
             </button>
           </div>
         </header>
       </div>
 
+      <div class="mobile-nav-overlay" data-mobile-nav-overlay></div>
+
+      <div
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-hidden="true"
+        data-mobile-nav
+      >
+        <button
+          class="mobile-nav__close"
+          type="button"
+          aria-label="Закрити меню"
+          data-mobile-nav-close
+        >
+          <span class="mobile-nav__close-line"></span>
+          <span class="mobile-nav__close-line"></span>
+        </button>
+
+        <nav class="mobile-nav__links" aria-label="Мобільна навігація">
+          <a class="mobile-nav__link" href="#topics">Теми</a>
+          <a class="mobile-nav__link" href="#approach">Підхід</a>
+          <a class="mobile-nav__link" href="#format">Умови</a>
+          <a class="mobile-nav__link" href="#certificates">Сертифікація</a>
+          <a class="mobile-nav__link" href="#faq">FAQ</a>
+        </nav>
+
+        <div
+          class="language-switcher mobile-nav__language"
+          data-language-switcher
+        >
+          <button
+            type="button"
+            class="language-switcher__toggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="language-switcher__current">UA</span>
+            <svg
+              class="language-switcher__icon"
+              width="8"
+              height="6"
+              viewBox="0 0 8 6"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M1 1L4 4L7 1"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="language-switcher__dropdown">
+            <button
+              type="button"
+              class="language-switcher__option is-active"
+              data-lang="UA"
+            >
+              UA
+            </button>
+            <button type="button" class="language-switcher__option" data-lang="RU">
+              RU
+            </button>
+          </div>
+        </div>
+
+        <a href="help.html" class="mobile-nav__emergency">
+          <span class="emergency-link__icon" aria-hidden="true"></span>
+          Екстрена допомога
+        </a>
+
+        <a class="button button--header mobile-nav__cta" href="#">
+          <span class="button-header__icon" aria-hidden="true"></span>
+          Записатися
+        </a>
+      </div>
+
       <main>
-        <!-- Hero -->
         <section class="hero" aria-labelledby="hero-title">
-          <div class="hero-media hero-media--left" aria-hidden="true">
-            <div class="hero-media__backdrop hero-media__backdrop--left"></div>
-            <figure class="hero-media__portrait">
-              <div class="hero-media__portrait-frame"></div>
-              <div class="hero-media__shadow-up"></div>
-              <div class="hero-media__shadow-left"></div>
-              <div class="hero-media__shadow-down"></div>
-              <img
-                class="hero-media__image hero-media__image--portrait"
-                src="./images/kotliarova.webp"
-                alt="Портрет психолога"
-              />
-            </figure>
-            <figure class="hero-media__embroidery">
-              <img
-                class="hero-media__image"
-                src="./images/ukranian-graphic.webp"
-                alt="Вишивка на фото гір"
-              />
-            </figure>
-            <div class="hero-media__video-text">
-              <p>Hic sum ut te adiuvem altius in te ipsum introspicere.</p>
+          <div class="hero-stack">
+            <div class="hero-content">
+              <div class="logo"><img src="./images/logo.webp" alt="" /></div>
+              <div class="hero-media__name">
+                <div class="hero-media__name-content">
+                  <div class="hero-media__name-text">
+                    <h1>Олександра Котлярова</h1>
+                  </div>
+                  <span
+                    class="hero-media__name-icon hero-media__name-icon-small"
+                  >
+                    <span class="hero-media__line"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="128 4 44 44"
+                      fill="none"
+                      role="img"
+                      aria-labelledby="title desc"
+                    >
+                      <g
+                        stroke="currentColor"
+                        stroke-width="2.8"
+                        stroke-linecap="square"
+                        stroke-linejoin="miter"
+                        vector-effect="non-scaling-stroke"
+                      >
+                        <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
+                        <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
+                        <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
+                        <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
+                      </g>
+                    </svg>
+                    <span class="hero-media__line"></span>
+                  </span>
+                  <div class="hero-media__details">
+                    <p>психолог</p>
+                    <span class="hero-media__vertical-line"></span>
+                    <p>гештальт-терапевт</p>
+                  </div>
+                </div>
+              </div>
+              <h1 class="hero-title" id="hero-title">
+                Інколи один крок визначає якість всієї дороги життя
+              </h1>
+              <span class="hero-media__name-icon hero-media__name-icon-middle">
+                <span class="hero-media__line"></span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="128 4 44 44"
+                  fill="none"
+                  role="img"
+                  aria-labelledby="title desc"
+                >
+                  <g
+                    stroke="currentColor"
+                    stroke-width="2.8"
+                    stroke-linecap="square"
+                    stroke-linejoin="miter"
+                    vector-effect="non-scaling-stroke"
+                  >
+                    <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
+                    <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
+                    <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
+                    <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
+                  </g>
+                </svg>
+                <span class="hero-media__line"></span>
+              </span>
+              <p class="hero-subtitle">Зроби цей крок.</p>
+              <div class="hero-actions">
+                <a class="button button--primary" href="#">
+                  Записатися на сесію
+                </a>
+                <button class="button button--secondary" type="button">
+                  Написати в Telegram
+                </button>
+              </div>
+            </div>
+
+            <div class="hero-media hero-media--left" aria-hidden="true">
+              <div
+                class="hero-media__backdrop hero-media__backdrop--left"
+              ></div>
+              <figure class="hero-media__portrait">
+                <div class="hero-media__portrait-frame"></div>
+                <div class="hero-media__shadow-up"></div>
+                <div class="hero-media__shadow-left"></div>
+                <div class="hero-media__shadow-down"></div>
+                <img
+                  class="hero-media__image hero-media__image--portrait"
+                  src="./images/kotliarova.webp"
+                  alt="Портрет психолога"
+                />
+                <figure class="hero-media__portrait-embroidery">
+                  <img
+                    class="hero-media__image"
+                    src="./images/ukranian-graphic.webp"
+                    alt="Вишивка на фото гір"
+                  />
+                </figure>
+                <div class="hero-media__portrait-video-text">
+                  <p>Hic sum ut te adiuvem altius in te ipsum introspicere.</p>
+                </div>
+              </figure>
+              <figure class="hero-media__embroidery">
+                <img
+                  class="hero-media__image"
+                  src="./images/ukranian-graphic.webp"
+                  alt="Вишивка на фото гір"
+                />
+              </figure>
+              <div class="hero-media__video-text">
+                <p>Hic sum ut te adiuvem altius in te ipsum introspicere.</p>
+              </div>
             </div>
           </div>
 
@@ -192,87 +396,9 @@
               </div>
             </figure>
           </div>
-
-          <div class="hero-content">
-            <div class="logo"><img src="./images/logo.webp" alt="" /></div>
-            <div class="hero-media__name">
-              <div class="hero-media__name-content">
-                <div class="hero-media__name-text">
-                  <h1>Олександра Котлярова</h1>
-                </div>
-                <span class="hero-media__name-icon hero-media__name-icon-small">
-                  <span class="hero-media__line"></span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="128 4 44 44"
-                    fill="none"
-                    role="img"
-                    aria-labelledby="title desc"
-                  >
-                    <g
-                      stroke="currentColor"
-                      stroke-width="2.8"
-                      stroke-linecap="square"
-                      stroke-linejoin="miter"
-                      vector-effect="non-scaling-stroke"
-                    >
-                      <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
-                      <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
-                      <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
-                      <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
-                    </g>
-                  </svg>
-                  <span class="hero-media__line"></span>
-                </span>
-                <div class="hero-media__details">
-                  <p>психолог</p>
-                  <span class="hero-media__vertical-line"></span>
-                  <p>гештальт-терапевт</p>
-                </div>
-              </div>
-            </div>
-            <h1 class="hero-title" id="hero-title">
-              Інколи один крок визначає якість всієї дороги життя
-            </h1>
-            <span class="hero-media__name-icon hero-media__name-icon-middle">
-              <span class="hero-media__line"></span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="128 4 44 44"
-                fill="none"
-                role="img"
-                aria-labelledby="title desc"
-              >
-                <g
-                  stroke="currentColor"
-                  stroke-width="2.8"
-                  stroke-linecap="square"
-                  stroke-linejoin="miter"
-                  vector-effect="non-scaling-stroke"
-                >
-                  <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
-                  <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
-                  <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
-                  <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
-                </g>
-              </svg>
-              <span class="hero-media__line"></span>
-            </span>
-            <p class="hero-subtitle">Зроби цей крок.</p>
-            <div class="hero-actions">
-              <button class="button button--primary" type="button">
-                Записатися на сесію
-              </button>
-              <button class="button button--secondary" type="button">
-                Написати в Telegram
-              </button>
-            </div>
-          </div>
         </section>
-        <!-- Hero -->
 
-        <!-- Topics -->
-        <section class="topics">
+        <section class="topics" id="topics">
           <div class="topics__bg">
             <img src="images/paper-end.png" class="topics__paper" alt="" />
           </div>
@@ -688,19 +814,16 @@
             </div>
           </div>
         </section>
-        <!-- Topics -->
 
-        <!-- Approach  -->
-        <section class="approach">
+        <section class="approach" id="approach">
           <div class="approach__bg approach__bg--left" aria-hidden="true"></div>
           <div
             class="approach__bg approach__bg--right"
             aria-hidden="true"
           ></div>
 
-          <div class="approach__intro-line" aria-hidden="true"></div>
-
           <div class="approach__content">
+            <div class="approach__intro-line" aria-hidden="true"></div>
             <div class="approach__intro">
               <div class="approach__title-wrapper">
                 <h2 class="approach__title">
@@ -725,7 +848,7 @@
                 ></div>
                 <img
                   class="approach__photo-image"
-                  src="images/approach_portrait.png"
+                  src="images/approach_img.jpg"
                   alt=""
                 />
               </figure>
@@ -737,8 +860,8 @@
                     >“</span
                   >
                   <p class="approach__quote-text">
-                    Терапія не змінює вас на когось іншого. Вона повертає вас до
-                    себе.
+                    Зцілення приходить не через розуміння, а через присутність.
+                    Коли поруч є хтось, хто здатен розділити твій біль.
                   </p>
                   <span
                     class="approach__quote-mark approach__quote-mark--close"
@@ -746,7 +869,7 @@
                     >”</span
                   >
                 </div>
-                <p class="approach__quote-author">— Карл Роджерс</p>
+                <p class="approach__quote-author">— Ірвін Ялом</p>
               </div>
             </div>
 
@@ -812,10 +935,7 @@
           </div>
         </section>
 
-        <!-- Approach  -->
-
-        <!-- Format -->
-        <section class="format">
+        <section class="format" id="format">
           <span
             class="format__line format__line--top-short"
             aria-hidden="true"
@@ -889,7 +1009,7 @@
                     <h3 class="format__item-title">Тривалість і ритм</h3>
                     <p class="format__item-text">
                       Одна сесія триває 55 хвилин. Оптимальний час для глибокої
-                      та ефективної роботи.
+                      та ефективної роботи. 1-2 рази на тиждень за домовленістю.
                     </p>
                   </div>
 
@@ -963,8 +1083,7 @@
           </div>
         </section>
 
-        <!-- Certificates -->
-        <section class="certificates">
+        <section class="certificates" id="certificates">
           <div class="certificates__bg" aria-hidden="true"></div>
           <span
             class="certificates__corner certificates__corner--top-left"
@@ -1141,6 +1260,23 @@
                   />
                 </a>
               </div>
+              <div
+                class="swiper-slide certificates__slide"
+                data-caption="Підготовка практичних психологів • 2026"
+              >
+                <a
+                  class="certificates__slide-link"
+                  href="images/cert2.jpg"
+                  data-fancybox="certificates"
+                  data-caption="Підготовка практичних психологів • 2026"
+                >
+                  <img
+                    class="certificates__slide-image"
+                    src="images/cert2.jpg"
+                    alt="Сертифікат"
+                  />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -1219,8 +1355,447 @@
           <span class="certificates__counter">03 / 06</span>
         </section>
 
-        <!-- Format -->
+        <section class="faq" id="faq">
+          <div class="faq__bg" aria-hidden="true"></div>
+
+          <div class="faq__container">
+            <div class="faq__intro">
+              <span class="faq__eyebrow">
+                <span class="faq__eyebrow-text">FAQ</span>
+                <span class="media__line"></span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="128 4 44 44"
+                  fill="none"
+                >
+                  <g
+                    stroke="currentColor"
+                    stroke-width="2.8"
+                    stroke-linecap="square"
+                    stroke-linejoin="miter"
+                    vector-effect="non-scaling-stroke"
+                  >
+                    <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
+                    <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
+                    <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
+                    <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
+                  </g>
+                </svg>
+              </span>
+              <h2 class="faq__title">
+                Часті запитання
+                <span class="italic">Відповіді поруч.</span>
+              </h2>
+              <span class="faq__divider" aria-hidden="true">
+                <span class="media__line"></span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="128 4 44 44"
+                  fill="none"
+                >
+                  <g
+                    stroke="currentColor"
+                    stroke-width="2.8"
+                    stroke-linecap="square"
+                    stroke-linejoin="miter"
+                    vector-effect="non-scaling-stroke"
+                  >
+                    <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
+                    <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
+                    <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
+                    <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
+                  </g>
+                </svg>
+                <span class="media__line"></span>
+              </span>
+              <p class="faq__description">
+                Тут зібрані відповіді на запитання, які найчастіше виникають
+                перед початком терапії.
+              </p>
+              <div class="faq__heart-wrap">
+                <img src="images/faq-heart.png" class="faq__heart" alt="" />
+              </div>
+            </div>
+
+            <div class="faq__card">
+              <span class="faq__card-frame" aria-hidden="true"></span>
+              <span class="faq__card-texture" aria-hidden="true"></span>
+              <div class="faq__card-inner">
+                <div class="faq__list">
+                  <div class="faq__item is-active">
+                    <button
+                      class="faq__item-header"
+                      type="button"
+                      aria-expanded="true"
+                    >
+                      <span class="faq__item-number">01</span>
+                      <span class="faq__item-title"
+                        >Як проходить перша сесія?</span
+                      >
+                      <span class="faq__item-icon" aria-hidden="true">
+                        <svg
+                          width="14"
+                          height="9"
+                          viewBox="0 0 14 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 1L7 7L13 1"
+                            stroke="currentColor"
+                            stroke-width="1.4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__item-content">
+                      <div class="faq__item-content-inner">
+                        <p class="faq__item-text">
+                          Перша зустріч — це знайомство та простір для вашого
+                          запиту. Ми обговорюємо, що привело вас у терапію,
+                          визначаємо ваші очікування та темп подальшої роботи.
+                          Також обговорюємо сеттинг та умови співпраці.
+                        </p>
+                        <p class="faq__item-text">
+                          Жодної додаткової підготовки перша зустріч не вимагає.
+                          Ви можете прийти з неоформленим запитом, і ми разом
+                          спробуємо його віднайти.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="faq__item">
+                    <button
+                      class="faq__item-header"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span class="faq__item-number">02</span>
+                      <span class="faq__item-title"
+                        >Скільки триває терапія?</span
+                      >
+                      <span class="faq__item-icon" aria-hidden="true">
+                        <svg
+                          width="14"
+                          height="9"
+                          viewBox="0 0 14 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 1L7 7L13 1"
+                            stroke="currentColor"
+                            stroke-width="1.4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__item-content">
+                      <div class="faq__item-content-inner">
+                        <p class="faq__item-text">
+                          У терапії ми можемо говорити про структурні або
+                          характерологічні зміни. Якщо йдеться про глибокі,
+                          стійкі патерни, якщо ви хочете змінити те, як ви
+                          будуєте стосунки із собою та іншими, терапія частіше
+                          вимірюється роками.
+                        </p>
+                        <p class="faq__item-text">
+                          Якщо ж ви хочете вирішити конкретну локальну проблему,
+                          мова може йти про 10–20 сесій.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="faq__item">
+                    <button
+                      class="faq__item-header"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span class="faq__item-number">03</span>
+                      <span class="faq__item-title"
+                        >Як зрозуміти, що психолог мені підходить?</span
+                      >
+                      <span class="faq__item-icon" aria-hidden="true">
+                        <svg
+                          width="14"
+                          height="9"
+                          viewBox="0 0 14 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 1L7 7L13 1"
+                            stroke="currentColor"
+                            stroke-width="1.4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__item-content">
+                      <div class="faq__item-content-inner">
+                        <p class="faq__item-text">
+                          Не обов’язково після першої зустрічі відчути повну
+                          довіру — вона формується поступово. Але важливо, щоб
+                          поруч із психологом ви могли бути собою, не відчували
+                          осуду чи тиску та бачили щирий інтерес до вашого
+                          досвіду.
+                        </p>
+                        <p class="faq__item-text">
+                          Терапія іноді може бути непростою, але самі стосунки з
+                          терапевтом мають залишатися достатньо безпечними.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="faq__item">
+                    <button
+                      class="faq__item-header"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span class="faq__item-number">04</span>
+                      <span class="faq__item-title"
+                        >Що робити, якщо мені буде соромно про щось
+                        говорити?</span
+                      >
+                      <span class="faq__item-icon" aria-hidden="true">
+                        <svg
+                          width="14"
+                          height="9"
+                          viewBox="0 0 14 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 1L7 7L13 1"
+                            stroke="currentColor"
+                            stroke-width="1.4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__item-content">
+                      <div class="faq__item-content-inner">
+                        <p class="faq__item-text">
+                          Сором, страх бути засудженим або бажання щось
+                          приховати — цілком природні в терапії. Вам не потрібно
+                          змушувати себе говорити про те, до чого ви ще не
+                          готові.
+                        </p>
+                        <p class="faq__item-text">Ваш темп має значення.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="faq__item">
+                    <button
+                      class="faq__item-header"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span class="faq__item-number">05</span>
+                      <span class="faq__item-title"
+                        >Чи буде психолог давати мені поради й говорити, як
+                        правильно вчинити?</span
+                      >
+                      <span class="faq__item-icon" aria-hidden="true">
+                        <svg
+                          width="14"
+                          height="9"
+                          viewBox="0 0 14 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 1L7 7L13 1"
+                            stroke="currentColor"
+                            stroke-width="1.4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__item-content">
+                      <div class="faq__item-content-inner">
+                        <p class="faq__item-text">
+                          Я не вирішуватиму за вас, як вам жити чи який вибір
+                          робити. Терапія — не про готові інструкції. Вона
+                          допомагає краще зрозуміти себе, свої почуття, потреби
+                          та повторювані сценарії, щоб рішення, які ви
+                          приймаєте, справді були вашими.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="step">
+          <div class="step__bg" aria-hidden="true"></div>
+          <span class="step__corner step__corner--top-left" aria-hidden="true">
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+          </span>
+          <span class="step__corner step__corner--top-right" aria-hidden="true">
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+          </span>
+          <span
+            class="step__corner step__corner--bottom-left"
+            aria-hidden="true"
+          >
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+          </span>
+          <span
+            class="step__corner step__corner--bottom-right"
+            aria-hidden="true"
+          >
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+            <i class="step__corner-line"></i>
+          </span>
+          <div class="step__container">
+            <div class="step__card">
+              <span class="step__divider" aria-hidden="true">
+                <span class="media__line"></span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="128 4 44 44"
+                  fill="none"
+                >
+                  <g
+                    stroke="currentColor"
+                    stroke-width="2.8"
+                    stroke-linecap="square"
+                    stroke-linejoin="miter"
+                    vector-effect="non-scaling-stroke"
+                  >
+                    <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
+                    <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
+                    <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
+                    <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
+                  </g>
+                </svg>
+                <span class="media__line"></span>
+              </span>
+
+              <div class="step__content">
+                <h2 class="step__title">
+                  Ви вже пройшли шлях.<br />
+                  Залишився лише один крок —
+                  <span class="italic">назустріч собі.</span>
+                </h2>
+
+                <div class="step__price">
+                  <span class="step__price-label"
+                    >Вартість для вашого регіону</span
+                  >
+                  <span class="step__price-value">60 €</span>
+                  <span class="step__price-line"></span>
+                  <span class="step__price-note">50 хв · онлайн</span>
+                </div>
+
+                <p class="step__description">
+                  Оберіть зручний спосіб — забронюйте сесію або напишіть мені.
+                </p>
+
+                <div class="step__actions">
+                  <a class="button button--primary" href="#">
+                    Записатися на сесію
+                  </a>
+                  <button class="button button--secondary" type="button">
+                    Написати в Telegram
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__bg" aria-hidden="true"></div>
+        <div class="site-footer__container">
+          <span class="site-footer__divider" aria-hidden="true">
+            <span class="media__line"></span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="128 4 44 44"
+              fill="none"
+            >
+              <g
+                stroke="currentColor"
+                stroke-width="2.8"
+                stroke-linecap="square"
+                stroke-linejoin="miter"
+                vector-effect="non-scaling-stroke"
+              >
+                <path d="M150 5.5 157 12.5 150 19.5 143 12.5Z" />
+                <path d="M136.5 19 143.5 26 136.5 33 129.5 26Z" />
+                <path d="M163.5 19 170.5 26 163.5 33 156.5 26Z" />
+                <path d="M150 32.5 157 39.5 150 46.5 143 39.5Z" />
+              </g>
+            </svg>
+            <span class="media__line"></span>
+          </span>
+
+          <div class="site-footer__row">
+            <div class="site-footer__brand">
+              <img
+                src="images/logo.webp"
+                class="site-footer__logo"
+                alt="Логотип Олександра Котлярова"
+              />
+              <span class="site-footer__name">Олександра Котлярова</span>
+            </div>
+
+            <nav class="site-footer__social" aria-label="Соціальні мережі">
+              <a href="#" class="site-footer__social-link">Instagram</a>
+              <span class="site-footer__dot" aria-hidden="true"></span>
+              <a href="#" class="site-footer__social-link">Telegram</a>
+            </nav>
+
+            <div class="site-footer__legal">
+              <a href="#" class="site-footer__legal-link"
+                >Політика повернення</a
+              >
+              <p class="site-footer__copyright">© 2026 Олександра Котлярова</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="js/main.js" defer></script>
   </body>

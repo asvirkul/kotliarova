@@ -131,7 +131,7 @@
   position: absolute;
   top: 5%;
   bottom: 5%;
-  left: 10px;
+  left: -3%;
   width: 2px;
   z-index: 2;
   background-color: $color-accent;
@@ -178,6 +178,7 @@
 
 .approach__intro {
   position: relative;
+  min-width: 0;
 }
 
 .approach__title {
@@ -276,6 +277,7 @@
   flex-direction: column;
   justify-content: start;
   margin-bottom: 10px;
+  min-width: 0;
 }
 
 .approach__item-title {
@@ -389,8 +391,8 @@
   text-align: center;
   font-family: $font-chopin;
   font-weight: 300;
-  font-size: 19px;
-  line-height: 1.3;
+  font-size: 16px;
+  line-height: 1.5;
   color: #332d25;
   margin-bottom: 15px;
 }
@@ -404,4 +406,96 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #332d25;
+}
+
+@media (max-width: 1200px) {
+  .approach__title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .italic {
+      margin-left: 10px;
+    }
+  }
+  .approach__description {
+    margin: 0 auto 100px auto;
+    text-align: center;
+  }
+  .approach__photo-block--paper {
+    right: -100px;
+    bottom: unset !important;
+  }
+  .approach__content {
+    grid-template-columns: 1fr;
+  }
+
+  .approach__bg {
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+  }
+
+  .approach__bg--left {
+    top: 0;
+    bottom: auto;
+  }
+
+  .approach__bg--right {
+    top: auto;
+    bottom: 0;
+  }
+  .approach__list {
+    margin-top: 150px;
+    padding: 20px;
+  }
+  .approach__photo {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .approach__photo-block--left {
+    left: auto;
+    right: 150px;
+    width: 95%;
+  }
+  .approach__quote {
+    left: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .approach__photo {
+    max-width: 90%;
+  }
+
+  .approach__photo-block--left {
+    right: 20px;
+    width: 90%;
+  }
+
+  .approach__photo-block--paper {
+    right: -15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .approach__title {
+    font-size: 35px;
+
+    .italic {
+      font-size: 56px;
+    }
+  }
+  .approach__title .italic {
+    font-size: 60px;
+  }
+  .approach__description {
+    font-size: 25px;
+  }
+  .approach__item-title {
+    font-size: 25px;
+    line-height: 1.3;
+  }
 }
